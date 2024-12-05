@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Forensics Toolkit</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Digital Forensics Toolkit</h1>
+
+    <!-- File Metadata Analysis Section -->
+    <section class="section">
+      <h2>File Metadata Analysis</h2>
+      <input type="file" id="fileInput" />
+      <div id="fileMetadata" class="result"></div>
+    </section>
+
+    <!-- File Integrity Check Section -->
+    <section class="section">
+      <h2>File Integrity Check (Hashing)</h2>
+      <input type="file" id="fileHashInput" />
+      <div id="fileHash" class="result"></div>
+    </section>
+
+    <!-- Log Analysis Section -->
+    <section class="section">
+      <h2>Log Analysis</h2>
+      <textarea id="logInput" placeholder="Paste your logs here"></textarea>
+      <button onclick="analyzeLogs()">Analyze Logs</button>
+      <div id="logResults" class="result"></div>
+    </section>
+
+    <!-- Poll Chart Section -->
+    <section class="section">
+      <h2>File Type Distribution</h2>
+      <canvas id="pollChart" width="400" height="400"></canvas>
+    </section>
+
+    <!-- Generate Report Section -->
+    <section class="section">
+      <h2>Generate Report</h2>
+      <button onclick="generateReport()">Generate Report</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
